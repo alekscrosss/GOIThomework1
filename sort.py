@@ -78,10 +78,13 @@ def process_folder(folder_path): #Формати та папки
             if not os.listdir(dir_path):
                 os.rmdir(dir_path)
 
-if __name__ == "__main__":
+def main():
     import sys
     if len(sys.argv) != 2:
-        print("python sort.py шлях до папки")
+        print("Використання: python sort.py <шлях_до_папки>")
     else:
         folder_path = sys.argv[1]
         process_folder(folder_path)
+
+if __name__ == "__main__":
+    main()
